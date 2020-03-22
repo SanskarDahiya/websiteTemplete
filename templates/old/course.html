@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/home1.css')}}">
+    <title>Courses</title>
+  </head>
+  <body>
+    <div id=bodycover>
+    </div>
+    <div id=bodymain>
+      <div id="head"></div>
+      <div id="body">
+        <!-- Enter data here -->
+        Still Updating...
+      </div>
+    </div>
+      <script>
+        fetch("/static/html/menu.html")
+          .then(response => {
+            return response.text();
+          })
+          .then(data => {
+            document.getElementById("head").innerHTML = data;
+          });
+      </script>
+  </body>
+
+</html>

@@ -1,0 +1,27 @@
+*{
+color:black;
+}
+#C_Name{
+  font-size: 22px;
+}
+#companies div span{
+  font-size: 18px;
+  font-weight: bold;
+}
+#yearSel{
+  float:right;
+  background-color: lightyellow;
+  width:20%;
+  margin-right: 9%;
+}
+#companies{
+  padding: 1% 2%;
+  width:60%;
+  float:left;
+}
+table,th,tr,td{
+  border:2pt solid black;
+  border-collapse: collapse;
+  padding: 10px;
+  align-content: center;
+}

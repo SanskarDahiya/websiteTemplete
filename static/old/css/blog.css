@@ -1,0 +1,245 @@
+body,html{
+	height: 100%;
+	margin:0;
+	padding: 0;
+}
+
+#bodycover{
+	background-image: url("../image/book.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	opacity: 0.5;
+}
+#bodymain{
+ background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.3); /* Black w/opacity/see-through */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+}
+
+
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.7);;
+  float: right;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  text-align: center;
+  color: #f5f5f5;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+/* Change the color of the links on hover*/
+  .navbar a:hover {
+    color: silver;
+  }
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: #f3f3f3;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgba(0,0,0,0.7);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f7f7f7;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #787075;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+	#head{
+		margin: 2% 15% 0 15%;
+	}
+	#body{
+		margin: 2% 15% 0 5%;
+	}
+	#registeration{
+		float: left;
+		background-color: rgba(250,250,50,0.2);
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+	#T_Desc,#T_name,#T_date,#T_head
+	{
+		font-size: 12px;
+		overflow: hidden;
+	}
+	#T_Desc,#T_name,#T_date,#T_head
+	{
+
+	}
+	table,tr,th,td{
+		border:1px solid black;
+		border-collapse:collapse;
+	}
+	table{
+		background-color: white;
+		margin-bottom:1%;
+	}
+	#content{
+		float: right;
+		margin: 0 0 0 10;
+		padding-right: 0;
+		padding-left:1%;
+		background-color: rgba(50,50,250,0.5);
+		width: 100%;
+		height: 75%;
+
+		overflow-y: scroll;
+	}
+	#content1{
+		float: left;
+		font-weight: bold;
+		padding-top: 1%;
+		font-size: 22px;
+}
+
+	#content,#registeration{
+		max-width: 48%;
+	}
+	*{box-sizing: border-box;}
+	input[type=text],
+	input[type=password],textarea{
+		padding: 10px;
+		display: inline-block;
+		border: none;
+		background: #f6f6f6;
+		min-width: 90%;
+	}
+input[type=submit]
+{
+	max-width: 100%;
+	padding: 5px;
+	width: 450px;
+	display: inline-block;
+
+}
+	input[type=text]:focus,
+	input[type=password]:focus{
+		outline: none;
+	}
+	button{
+		background-color: grey;
+		color: white;
+		padding: 14px 20px;
+		border: none;
+		cursor: pointer;
+		opacity: 0.8;
+		width: 100%;
+	}
+
+	button.hover{
+		opacity: 1;
+	}
+	.loginbtn{
+		padding: 14px 20px;
+		background-color: #F44336;
+	}
+	.loginbtn, .signupbtn{
+		float: left;
+		width: 50%;
+	}
+	.container{
+		font-size: 14px;
+	}
+ #signin,#signup{
+ 	display: none;
+ }
+#signinhead,#signuphead,#signin,#signup
+{
+	transition: 1s;
+}
+ #signinhead:hover,#signuphead:hover
+ {
+ 	color:white;
+ }
+
+ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	color: white;
+
+}
+ul li {
+	float: left;
+	width: 200px;
+	height: 40px;
+	background-color: black;
+	opacity: 0.8;
+	line-height: 40px;
+	text-align: center;
+	font-size: 20px;
+
+}
+ul li a{
+	text-decoration: none;
+	color: white;
+	display: block;
+
+}
+ul li a:hover{
+	background-color: green;
+
+}
+
+ul li ul li{
+	display: none;
+
+}
+ul li: hover ul li{
+	display: block;
+
+}

@@ -1,0 +1,10 @@
+var c1=["Name","www.kfds.in","THis is it","All,10%jdfgskl","Tr/HR","PAN India","January","0 LPA","5 yr"];
+document.getElementById('C_Name').innerHTML = c1[0];
+document.getElementById('C_Link').innerHTML = c1[1];
+document.getElementById('C_Desc').innerHTML = c1[2];
+document.getElementById('C_Elig').innerHTML = c1[3];
+document.getElementById('C_Sele').innerHTML = c1[4];
+document.getElementById('C_Loca').innerHTML = c1[5];
+document.getElementById('C_Join').innerHTML = c1[6];
+document.getElementById('C_Pack').innerHTML = c1[7];
+document.getElementById('C_Aggr').innerHTML = c1[8];
