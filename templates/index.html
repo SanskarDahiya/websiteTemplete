@@ -63,6 +63,54 @@
 
     <!-- **HERE MEIN COTENT ******************* -->
     <div>
+      <div
+        id="123"
+        style="
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          z-index: 10;
+          background-color: rgba(17, 17, 40, 0.3);
+        "
+      >
+        <div
+          style="
+            margin: 10%;
+            border: 1px dashed white;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            color: white;
+            background-color: rgb(17, 17, 40);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <button
+            style="
+              position: absolute;
+              top: 0;
+              right: 0;
+              padding: 10px;
+              margin: 1%;
+            "
+            onclick="(()=>{
+              document.getElementById('123').style.display='none'
+            })()"
+          >
+            X
+          </button>
+          abcd
+        </div>
+      </div>
+
       <section class="home-slider owl-carousel">
         {% for item in headingImages %}
         <div
@@ -182,7 +230,7 @@
             >
               <div
                 class="img"
-                style="background-image: url(static/images/about.jpg); "
+                style="background-image: url(static/images/about.jpg);"
               ></div>
             </div>
             <div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
@@ -322,7 +370,10 @@
             <div
               class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5"
             >
-              <h2 class="mb-4">Seth Jai Parkash Mukand Lal Institute of Engineering and Technology</h2>
+              <h2 class="mb-4">
+                Seth Jai Parkash Mukand Lal Institute of Engineering and
+                Technology
+              </h2>
               <p>
                 Separated they live in. A small river named Duden flows by their
                 place and supplies it with the necessary regelialia. It is a
@@ -891,7 +942,9 @@
                   <div class="testimony-wrap d-flex">
                     <div
                       class="user-img mr-4"
-                      style="background-image: url(static/images/teacher-1.jpg)"
+                      style="
+                        background-image: url(static/images/teacher-1.jpg);
+                      "
                     ></div>
                     <div class="text ml-2">
                       <span
@@ -913,7 +966,9 @@
                   <div class="testimony-wrap d-flex">
                     <div
                       class="user-img mr-4"
-                      style="background-image: url(static/images/teacher-2.jpg)"
+                      style="
+                        background-image: url(static/images/teacher-2.jpg);
+                      "
                     ></div>
                     <div class="text ml-2">
                       <span
@@ -935,7 +990,9 @@
                   <div class="testimony-wrap d-flex">
                     <div
                       class="user-img mr-4"
-                      style="background-image: url(static/images/teacher-3.jpg)"
+                      style="
+                        background-image: url(static/images/teacher-3.jpg);
+                      "
                     ></div>
                     <div class="text ml-2">
                       <span
@@ -957,7 +1014,9 @@
                   <div class="testimony-wrap d-flex">
                     <div
                       class="user-img mr-4"
-                      style="background-image: url(static/images/teacher-4.jpg)"
+                      style="
+                        background-image: url(static/images/teacher-4.jpg);
+                      "
                     ></div>
                     <div class="text ml-2">
                       <span
@@ -979,7 +1038,9 @@
                   <div class="testimony-wrap d-flex">
                     <div
                       class="user-img mr-4"
-                      style="background-image: url(static/images/teacher-1.jpg)"
+                      style="
+                        background-image: url(static/images/teacher-1.jpg);
+                      "
                     ></div>
                     <div class="text ml-2">
                       <span
@@ -1103,21 +1164,22 @@
       <script src="{{ url_for('static', filename='js/jquery.animateNumber.min.js')}}"></script>
       <script src="{{ url_for('static', filename='js/scrollax.min.js')}}"></script>
       <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+
       <script>
         fetch("{{ url_for('static', filename='html/header.html') }}")
-          .then(res => {
+          .then((res) => {
             console.log("Gettinh Header");
             return res.text();
           })
-          .then(res => {
+          .then((res) => {
             document.getElementById("header").innerHTML = res;
           });
         fetch("{{ url_for('static', filename='html/footer.html') }}")
-          .then(res => {
+          .then((res) => {
             console.log("Gettinh Header");
             return res.text();
           })
-          .then(res => {
+          .then((res) => {
             document.getElementById("footer").innerHTML = res;
           });
       </script>

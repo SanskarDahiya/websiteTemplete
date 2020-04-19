@@ -33,12 +33,18 @@
           <div
             class="col-md topper d-flex align-items-center justify-content-end"
           >
-            <p class="mb-0">
+            <p
+              class="mb-0"
+              onclick="(()=>{
+              let ele = document.getElementById('123')
+              ele.style.display = ele.style.display=='none'?'block':'none'
+            })()"
+            >
               <a
                 href="#"
                 class="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center"
               >
-                <span>Login/Register</span>
+                <span id="username">Login</span>
               </a>
             </p>
           </div>
@@ -95,4 +101,5 @@
     </div>
   </div>
 </nav>
+
 <!-- END nav -->
