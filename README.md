@@ -1,5 +1,10 @@
 # Project1\
-ok
+
+
+This project use mogodb server
+
+add your server address in here[FlaskScripts/dataase/dataase.py]
+ 
 
 
 Features = [
