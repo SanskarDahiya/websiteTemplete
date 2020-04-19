@@ -14,60 +14,70 @@ app.register_blueprint(users)
 app.register_blueprint(blogs)
 
 
-
-
 @app.route('/about')
-def a2():
+def about():
     return make_response(render_template("about.html"))
 
 
 @app.route('/blogs')
-def a4():
+def singleBlog():
     return make_response(render_template("blog-single.html"))
 
-# @app.route("/")
-# def acd():
-#     return "acd"
+
+@app.route("/courses")
+def courses():
+    return make_response(render_template("courses.html"))
+
+
+@app.route("/staff")
+def staff():
+    return make_response(render_template("teacher.html"))
+
+
+@app.route("/contact")
+def contact():
+    return make_response(render_template("contact.html"))
+
 
 @app.route("/")
 def index():
     data = [
         {
-        'imageUrl': "images/bg_1.jpg",
-        "title": "abbcd",
-        "desc": " kuch hi",
-        "button": [{
-            "title": "123",
-            "link": "/"
-        }]
-    }, {
-        'imageUrl': "images/bg_1.jpg",
-        "title": "abbcd",
-        "desc": " kuch hi",
-        "button": [{
-            "title": "123",
-            "link": "/"
-        }]
-    }, {
-        'imageUrl': "images/bg_1.jpg",
-        "title": "abbcd",
-        "desc": " kuch hi",
-        "button": [{
-            "title": "123",
-            "link": "/"
-        },{
-            "title": "123",
-            "link": "/"
-        }]
-    }, {
-        'imageUrl': "images/bg_1.jpg",
-        "title": "abbcd",
-        "desc": " kuch hi",
-        "button": [{
-            "title": "123",
-            "link": "/"
-        }]
-    }, ]
+            'imageUrl': "images/bg_1.jpg",
+            "title": "abbcd",
+            "desc": " kuch hi",
+            "button": [{
+                "title": "123",
+                "link": "/"
+            }]
+        }, {
+            'imageUrl': "images/bg_1.jpg",
+            "title": "abbcd",
+            "desc": " kuch hi",
+            "button": [{
+                "title": "123",
+                "link": "/"
+            }]
+        }, {
+            'imageUrl': "images/bg_1.jpg",
+            "title": "abbcd",
+            "desc": " kuch hi",
+            "button": [{
+                "title": "123",
+                "link": "/"
+            }, {
+                "title": "123",
+                "link": "/"
+            }]
+        }, {
+            'imageUrl': "images/bg_1.jpg",
+            "title": "abbcd",
+            "desc": " kuch hi",
+            "button": [{
+                "title": "123",
+                "link": "/"
+            }]
+        }, ]
     resp = make_response(render_template("index.html", headingImages=data))
     if(request.cookies.get('userid')):
         userdata = userDB.finduser(

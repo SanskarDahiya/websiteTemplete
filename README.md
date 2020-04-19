@@ -3,7 +3,7 @@
 
 This project use mogodb server
 
-add your server address in here[FlaskScripts/dataase/dataase.py]
+add your server address in here[FlaskScripts/database/database.py]
  
 
 
