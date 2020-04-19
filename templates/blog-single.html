@@ -13,20 +13,50 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/open-iconic-bootstrap.min.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}"/>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/open-iconic-bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/animate.css') }}"
+    />
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}"/>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/owl.carousel.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/magnific-popup.css') }}"
+    />
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}"/>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/aos.css') }}"
+    />
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/ionicons.min.css') }}"/>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/ionicons.min.css') }}"
+    />
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/flaticon.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/icomoon.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
   </head>
   <body>
     <div id="header"></div>
@@ -43,17 +73,15 @@
             class="row no-gutters slider-text align-items-center justify-content-center"
           >
             <div class="col-md-9 ftco-animate text-center">
-              <h1 class="mb-2 bread">Blog Single</h1>
+              <h1 class="mb-2 bread">{{blog["title"]}}</h1>
               <p class="breadcrumbs">
                 <span class="mr-2"
-                  ><a href="index.html"
-                    >Home <i class="ion-ios-arrow-forward"></i></a
+                  ><a href="/">Home <i class="ion-ios-arrow-forward"></i></a
                 ></span>
                 <span class="mr-2"
-                  ><a href="index.html"
-                    >Blog <i class="ion-ios-arrow-forward"></i></a
+                  ><a href="/blog">Blog <i class="ion-ios-arrow-forward"></i></a
                 ></span>
-                <span>Blog Single <i class="ion-ios-arrow-forward"></i></span>
+                <span>Single Blog<i class="ion-ios-arrow-forward"></i></span>
               </p>
             </div>
           </div>
@@ -66,80 +94,34 @@
             <div class="col-lg-8 ftco-animate">
               <h2 class="mb-3">#2. Creative WordPress Themes</h2>
               <p>
-                Temporibus ad error suscipit exercitationem hic molestiae totam
-                obcaecati rerum, eius aut, in. Exercitationem atque quidem
-                tempora maiores ex architecto voluptatum aut officia doloremque.
-                Error dolore voluptas, omnis molestias odio dignissimos culpa ex
-                earum nisi consequatur quos odit quasi repellat qui officiis
-                reiciendis incidunt hic non? Debitis commodi aut, adipisci.
-              </p>
-              <p>
-                <img src="images/image_2.jpg" alt="" class="img-fluid" />
-              </p>
-              <p>
-                Quisquam esse aliquam fuga distinctio, quidem delectus veritatis
-                reiciendis. Nihil explicabo quod, est eos ipsum. Unde aut non
-                tenetur tempore, nisi culpa voluptate maiores officiis quis vel
-                ab consectetur suscipit veritatis nulla quos quia aspernatur
-                perferendis, libero sint. Error, velit, porro. Deserunt minus,
-                quibusdam iste enim veniam, modi rem maiores.
-              </p>
-              <p>
-                Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum,
-                quo velit commodi rerum eum quidem pariatur! Quia fuga iste
-                tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro
-                explicabo soluta commodi libero voluptatem similique id quidem?
-                Blanditiis voluptates aperiam non magni. Reprehenderit nobis
-                odit inventore, quia laboriosam harum excepturi ea.
-              </p>
-              <p>
-                Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam
-                ipsam quidem, dolor distinctio similique asperiores voluptas
-                enim, exercitationem ratione aut adipisci modi quod quibusdam
-                iusto, voluptates beatae iure nemo itaque laborum. Consequuntur
-                et pariatur totam fuga eligendi vero dolorum provident.
-                Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus
-                culpa, tenetur recusandae!
-              </p>
-              <p>
-                Voluptas dolores dignissimos dolorum temporibus, autem aliquam
-                ducimus at officia adipisci quasi nemo a perspiciatis provident
-                magni laboriosam repudiandae iure iusto commodi debitis est
-                blanditiis alias laborum sint dolore. Dolores, iure,
-                reprehenderit. Error provident, pariatur cupiditate soluta
-                doloremque aut ratione. Harum voluptates mollitia illo minus
-                praesentium, rerum ipsa debitis, inventore?
+                {{blog["desc"]}}
+                <!-- <img src="{{ url_for('static', filename='images/image_2.jpg')  }}" alt="" class="img-fluid" /> -->
               </p>
               <div class="tag-widget post-tag-container mb-5 mt-5">
                 <div class="tagcloud">
-                  <a href="#" class="tag-cloud-link">Life</a>
-                  <a href="#" class="tag-cloud-link">Sport</a>
-                  <a href="#" class="tag-cloud-link">Tech</a>
-                  <a href="#" class="tag-cloud-link">Travel</a>
+                  {%for cat in blog["category"]%}
+                  <a href="#" class="tag-cloud-link">{{cat}}</a>
+                  {%endfor%}
                 </div>
               </div>
 
               <div class="about-author d-flex p-4 bg-light">
                 <div class="bio mr-5">
                   <img
-                    src="images/teacher-1.jpg"
-                    alt="Image placeholder"
+                    src="/"
+                    alt="Uer Image"
                     class="img-fluid mb-4"
                   />
                 </div>
                 <div class="desc">
-                  <h3>George Washington</h3>
+                  <h3>{{ blog['uploadedBy']['name']}}</h3>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Ducimus itaque, autem necessitatibus voluptate quod mollitia
-                    delectus aut, sunt placeat nam vero culpa sapiente
-                    consectetur similique, inventore eos fugit cupiditate
-                    numquam!
+                    <!-- USER DESCEREPTION -->
                   </p>
                 </div>
               </div>
 
-              <div class="pt-5 mt-5">
+              <!-- <div class="pt-5 mt-5">
                 <h3 class="mb-5 h4 font-weight-bold">6 Comments</h3>
                 <ul class="comment-list">
                   <li class="comment">
@@ -159,120 +141,8 @@
                       <p><a href="#" class="reply">Reply</a></p>
                     </div>
                   </li>
-
-                  <li class="comment">
-                    <div class="vcard bio">
-                      <img src="images/teacher-1.jpg" alt="Image placeholder" />
-                    </div>
-                    <div class="comment-body">
-                      <h3>John Doe</h3>
-                      <div class="meta mb-2">June 27, 2019 at 2:21pm</div>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Pariatur quidem laborum necessitatibus, ipsam
-                        impedit vitae autem, eum officia, fugiat saepe enim
-                        sapiente iste iure! Quam voluptas earum impedit
-                        necessitatibus, nihil?
-                      </p>
-                      <p><a href="#" class="reply">Reply</a></p>
-                    </div>
-
-                    <ul class="children">
-                      <li class="comment">
-                        <div class="vcard bio">
-                          <img
-                            src="images/teacher-1.jpg"
-                            alt="Image placeholder"
-                          />
-                        </div>
-                        <div class="comment-body">
-                          <h3>John Doe</h3>
-                          <div class="meta mb-2">June 27, 2019 at 2:21pm</div>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Pariatur quidem laborum necessitatibus, ipsam
-                            impedit vitae autem, eum officia, fugiat saepe enim
-                            sapiente iste iure! Quam voluptas earum impedit
-                            necessitatibus, nihil?
-                          </p>
-                          <p><a href="#" class="reply">Reply</a></p>
-                        </div>
-
-                        <ul class="children">
-                          <li class="comment">
-                            <div class="vcard bio">
-                              <img
-                                src="images/teacher-1.jpg"
-                                alt="Image placeholder"
-                              />
-                            </div>
-                            <div class="comment-body">
-                              <h3>John Doe</h3>
-                              <div class="meta mb-2">
-                                June 27, 2019 at 2:21pm
-                              </div>
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Pariatur quidem laborum
-                                necessitatibus, ipsam impedit vitae autem, eum
-                                officia, fugiat saepe enim sapiente iste iure!
-                                Quam voluptas earum impedit necessitatibus,
-                                nihil?
-                              </p>
-                              <p><a href="#" class="reply">Reply</a></p>
-                            </div>
-
-                            <ul class="children">
-                              <li class="comment">
-                                <div class="vcard bio">
-                                  <img
-                                    src="images/teacher-1.jpg"
-                                    alt="Image placeholder"
-                                  />
-                                </div>
-                                <div class="comment-body">
-                                  <h3>John Doe</h3>
-                                  <div class="meta mb-2">
-                                    June 27, 2019 at 2:21pm
-                                  </div>
-                                  <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Pariatur quidem laborum
-                                    necessitatibus, ipsam impedit vitae autem,
-                                    eum officia, fugiat saepe enim sapiente iste
-                                    iure! Quam voluptas earum impedit
-                                    necessitatibus, nihil?
-                                  </p>
-                                  <p><a href="#" class="reply">Reply</a></p>
-                                </div>
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li class="comment">
-                    <div class="vcard bio">
-                      <img src="images/teacher-1.jpg" alt="Image placeholder" />
-                    </div>
-                    <div class="comment-body">
-                      <h3>John Doe</h3>
-                      <div class="meta mb-2">June 27, 2019 at 2:21pm</div>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Pariatur quidem laborum necessitatibus, ipsam
-                        impedit vitae autem, eum officia, fugiat saepe enim
-                        sapiente iste iure! Quam voluptas earum impedit
-                        necessitatibus, nihil?
-                      </p>
-                      <p><a href="#" class="reply">Reply</a></p>
-                    </div>
-                  </li>
                 </ul>
-                <!-- END comment-list -->
-
+                 END comment-list
                 <div class="comment-form-wrap pt-5">
                   <h3 class="mb-5 h4 font-weight-bold">Leave a comment</h3>
                   <form action="#" class="p-5 bg-light">
@@ -308,7 +178,8 @@
                     </div>
                   </form>
                 </div>
-              </div>
+
+              </div> -->
             </div>
             <!-- .col-md-8 -->
 

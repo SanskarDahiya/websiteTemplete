@@ -14,9 +14,6 @@ app.register_blueprint(users)
 app.register_blueprint(blogs)
 
 
-@app.route('/cour')
-def a1():
-    return make_response(render_template("courses.html"))
 
 
 @app.route('/about')
@@ -24,16 +21,54 @@ def a2():
     return make_response(render_template("about.html"))
 
 
-
-
 @app.route('/blogs')
 def a4():
     return make_response(render_template("blog-single.html"))
 
+# @app.route("/")
+# def acd():
+#     return "acd"
 
 @app.route("/")
 def index():
-    resp = make_response(render_template("index.html"))
+    data = [
+        {
+        'imageUrl': "images/bg_1.jpg",
+        "title": "abbcd",
+        "desc": " kuch hi",
+        "button": [{
+            "title": "123",
+            "link": "/"
+        }]
+    }, {
+        'imageUrl': "images/bg_1.jpg",
+        "title": "abbcd",
+        "desc": " kuch hi",
+        "button": [{
+            "title": "123",
+            "link": "/"
+        }]
+    }, {
+        'imageUrl': "images/bg_1.jpg",
+        "title": "abbcd",
+        "desc": " kuch hi",
+        "button": [{
+            "title": "123",
+            "link": "/"
+        },{
+            "title": "123",
+            "link": "/"
+        }]
+    }, {
+        'imageUrl': "images/bg_1.jpg",
+        "title": "abbcd",
+        "desc": " kuch hi",
+        "button": [{
+            "title": "123",
+            "link": "/"
+        }]
+    }, ]
+    resp = make_response(render_template("index.html", headingImages=data))
     if(request.cookies.get('userid')):
         userdata = userDB.finduser(
             '_id', request.cookies.get('userid')) or False

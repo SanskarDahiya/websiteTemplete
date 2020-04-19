@@ -13,20 +13,50 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/open-iconic-bootstrap.min.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}"/>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/open-iconic-bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/animate.css') }}"
+    />
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}"/>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/owl.carousel.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/magnific-popup.css') }}"
+    />
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}"/>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/aos.css') }}"
+    />
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/ionicons.min.css') }}"/>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/ionicons.min.css') }}"
+    />
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}"/>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/flaticon.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/icomoon.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
   </head>
   <body>
     <div id="header"></div>
@@ -34,9 +64,10 @@
     <!-- **HERE MEIN COTENT ******************* -->
     <div>
       <section class="home-slider owl-carousel">
+        {% for item in headingImages %}
         <div
           class="slider-item"
-          style="background-image:url(static/images/bg_1.jpg);"
+          style="background-image:url(static/{{item.imageUrl}});"
         >
           <div class="overlay"></div>
           <div class="container">
@@ -45,46 +76,23 @@
               data-scrollax-parent="true"
             >
               <div class="col-md-6 ftco-animate">
-                <h1 class="mb-4">Education Needs Complete Solution</h1>
+                <h1 class="mb-4">{{item.title}}</h1>
+                <p>{{item.desc}}</p>
+                {% for button in item.button %}
                 <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
-                </p>
-                <p>
-                  <a href="#" class="btn btn-primary px-4 py-3 mt-3"
-                    >Contact Us</a
+                  <a
+                    href="{{button.link}}"
+                    class="btn btn-primary px-4 py-3 mt-3"
                   >
+                    {{button.title}}
+                  </a>
                 </p>
+                {% endfor %}
               </div>
             </div>
           </div>
         </div>
-
-        <div
-          class="slider-item"
-          style="background-image:url(static/images/bg_2.jpg);"
-        >
-          <div class="overlay"></div>
-          <div class="container">
-            <div
-              class="row no-gutters slider-text align-items-center justify-content-start"
-              data-scrollax-parent="true"
-            >
-              <div class="col-md-6 ftco-animate">
-                <h1 class="mb-4">University, College School Education</h1>
-                <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.
-                </p>
-                <p>
-                  <a href="#" class="btn btn-primary px-4 py-3 mt-3"
-                    >Contact Us</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
       </section>
 
       <section class="ftco-services ftco-no-pb">
@@ -303,7 +311,7 @@
               >
                 <div class="video justify-content-center">
                   <a
-                    href="https://vimeo.com/45830194"
+                    href="https://youtu.be/gDnH4acvmY8"
                     class="icon-video popup-vimeo d-flex justify-content-center align-items-center"
                   >
                     <span class="ion-ios-play"></span>
@@ -314,7 +322,7 @@
             <div
               class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5"
             >
-              <h2 class="mb-4">Fox University</h2>
+              <h2 class="mb-4">Seth Jai Parkash Mukand Lal Institute of Engineering and Technology</h2>
               <p>
                 Separated they live in. A small river named Duden flows by their
                 place and supplies it with the necessary regelialia. It is a
@@ -341,8 +349,8 @@
                       <span class="flaticon-doctor"></span>
                     </div>
                     <div class="text">
-                      <strong class="number" data-number="18">0</strong>
-                      <span>Certified Teachers</span>
+                      <strong class="number" data-number="287">0+</strong>
+                      <span>Placements</span>
                     </div>
                   </div>
                 </div>
@@ -354,7 +362,7 @@
                       <span class="flaticon-doctor"></span>
                     </div>
                     <div class="text">
-                      <strong class="number" data-number="401">0</strong>
+                      <strong class="number" data-number="1857">0</strong>
                       <span>Students</span>
                     </div>
                   </div>
@@ -367,12 +375,12 @@
                       <span class="flaticon-doctor"></span>
                     </div>
                     <div class="text">
-                      <strong class="number" data-number="30">0</strong>
-                      <span>Courses</span>
+                      <strong class="number" data-number="375">0</strong>
+                      <span>Guest Lecture/Workshops</span>
                     </div>
                   </div>
                 </div>
-                <div
+                <!-- <div
                   class="col-md d-flex justify-content-center counter-wrap ftco-animate"
                 >
                   <div class="block-18">
@@ -384,7 +392,7 @@
                       <span>Awards Won</span>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -1097,12 +1105,18 @@
       <script src="{{ url_for('static', filename='js/main.js')}}"></script>
       <script>
         fetch("{{ url_for('static', filename='html/header.html') }}")
-          .then(res => res.text())
+          .then(res => {
+            console.log("Gettinh Header");
+            return res.text();
+          })
           .then(res => {
             document.getElementById("header").innerHTML = res;
           });
         fetch("{{ url_for('static', filename='html/footer.html') }}")
-          .then(res => res.text())
+          .then(res => {
+            console.log("Gettinh Header");
+            return res.text();
+          })
           .then(res => {
             document.getElementById("footer").innerHTML = res;
           });

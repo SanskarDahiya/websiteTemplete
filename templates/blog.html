@@ -74,12 +74,12 @@
             class="row no-gutters slider-text align-items-center justify-content-center"
           >
             <div class="col-md-9 ftco-animate text-center">
-              <h1 class="mb-2 bread">Best Teacher</h1>
+              <h1 class="mb-2 bread">All Blogs</h1>
               <p class="breadcrumbs">
                 <span class="mr-2"
                   ><a href="/">Home <i class="ion-ios-arrow-forward"></i></a
                 ></span>
-                <span>Teacher <i class="ion-ios-arrow-forward"></i></span>
+                <span>Blogs <i class="ion-ios-arrow-forward"></i></span>
               </p>
             </div>
           </div>
@@ -89,6 +89,7 @@
       <section class="ftco-section bg-light">
         <div class="container">
           <div class="row">
+            <!--********************************** BLOG STARTS *******************************************-->
             {% for item in blogs %}
             <div class="col-md-6 col-lg-4 ftco-animate">
               <div class="blog-entry">
@@ -105,7 +106,7 @@
                 </a>
                 <div class="text bg-white p-4">
                   <h3 class="heading">
-                    <a href="#">
+                    <a href="singleblog?id={{item._id}}">
                       {{item.title}}
                     </a>
                   </h3>
@@ -114,7 +115,9 @@
                   </p>
                   <div class="d-flex align-items-center mt-4">
                     <p class="mb-0">
-                      <a href="#" class="btn btn-primary"
+                      <a
+                        href="singleblog?id={{item._id}}"
+                        class="btn btn-primary"
                         >Read More
                         <span class="ion-ios-arrow-round-forward"></span
                       ></a>
@@ -122,7 +125,8 @@
                     <p class="ml-auto mb-0">
                       <a href="#" class="mr-2">{{item.uploadedBy.name}}</a>
                       <a href="#" class="meta-chat"
-                        ><span class="icon-chat"></span>{{item.comments|length}}</a
+                        ><span class="icon-chat"></span
+                        >{{item.comments|length}}</a
                       >
                     </p>
                   </div>
