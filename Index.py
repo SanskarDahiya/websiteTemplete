@@ -44,37 +44,34 @@ def index():
     data = [
         {
             'imageUrl': "images/bg_1.jpg",
-            "title": "abbcd",
-            "desc": " kuch hi",
+            "title": "ELearning",
+            "desc": " Computer Science And Engineering",
             "button": [{
-                "title": "123",
+                "title": "2020",
                 "link": "/"
             }]
         }, {
             'imageUrl': "images/bg_1.jpg",
-            "title": "abbcd",
-            "desc": " kuch hi",
+            "title": "ELearning",
+            "desc": " Computer Science And Engineering",
             "button": [{
-                "title": "123",
+                "title": "2020",
                 "link": "/"
             }]
         }, {
             'imageUrl': "images/bg_1.jpg",
-            "title": "abbcd",
-            "desc": " kuch hi",
+            "title": "ELearning",
+            "desc": " Computer Science And Engineering",
             "button": [{
-                "title": "123",
-                "link": "/"
-            }, {
-                "title": "123",
+                "title": "2020",
                 "link": "/"
             }]
         }, {
             'imageUrl': "images/bg_1.jpg",
-            "title": "abbcd",
-            "desc": " kuch hi",
+            "title": "ELearning",
+            "desc": " Computer Science And Engineering",
             "button": [{
-                "title": "123",
+                "title": "2020",
                 "link": "/"
             }]
         }, ]
