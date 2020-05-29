@@ -11,11 +11,9 @@ import Index from "./componnents";
 const App = (props) => {
   return (
     <Router>
-      <div>
-        <Header />
-        <Index />
-        <Footer />
-      </div>
+      <Header />
+      <Index />
+      <Footer />
     </Router>
   );
 };
