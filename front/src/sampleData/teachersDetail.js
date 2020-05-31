@@ -13,7 +13,7 @@ export const TEACHERSDATA = [
   },
   {
     name: "Dr. Gaurav Sharma",
-    position: "Dean CS & IT Services",
+    position: "HOD CSE",
     intro: "I am an ambitious workaholic, but apart from that, pretty simple person.",
     image: publicUrl + "/images/teacher-2.jpg",
     twitter: "#",

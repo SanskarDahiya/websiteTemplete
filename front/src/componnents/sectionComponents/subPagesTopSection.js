@@ -1,16 +1,5 @@
 import React from "react";
-import { Router, Route, Link } from "react-router-dom";
-import { headingImages } from "../../sampleData/homePageData";
-import { Fade } from "react-slideshow-image";
-const fadeProperties = {
-  duration: 2000,
-  transitionDuration: 500,
-  infinite: true,
-  indicators: true,
-  onChange: (oldIndex, newIndex) => {
-    // console.log(`fade transition from ${oldIndex} to ${newIndex}`);
-  },
-};
+import { Link } from "react-router-dom";
 const SubPagesTopSection = (props) => {
   let subPageLink = props.subPageLink || [];
 

@@ -1,5 +1,4 @@
 import React from "react";
-import { Router, Route, Link } from "react-router";
 import HeadingImageSection from "./sectionComponents/headingImageSection";
 import BriefIntroOfCollege from "./sectionComponents/briefIntroOfCollegeSection";
 import WhatWeOfferSection from "./sectionComponents/whatWeOfferSection";

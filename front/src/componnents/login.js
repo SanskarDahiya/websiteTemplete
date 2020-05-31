@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Login = (props) => {
   return (
@@ -13,6 +13,4 @@ const Login = (props) => {
   );
 };
 
-
-
-export default Login
+export default Login;

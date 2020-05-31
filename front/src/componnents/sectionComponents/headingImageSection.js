@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { headingImages } from "../../sampleData/homePageData";
 import { Fade } from "react-slideshow-image";
 const fadeProperties = {

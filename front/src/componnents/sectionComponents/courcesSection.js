@@ -32,7 +32,7 @@ const CourcesSection = (props) => {
               <div className="img" style={{ backgroundImage: `url(${elem.image})` }} />
               <div className="text pt-4">
                 <h3>
-                  <Link to={elem.link}>{elem.name}</Link>
+                  <a href={elem.link}>{elem.name}</a>
                 </h3>
                 <p>{elem.description}</p>
                 <p>

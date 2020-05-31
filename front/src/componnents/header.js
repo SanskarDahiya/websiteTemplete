@@ -61,7 +61,7 @@ const Header = (props) => {
           <form onSubmit={handleForm} className="searchform order-lg-last">
             <div className="form-group d-flex">
               <input type="text" className="form-control pl-3" placeholder="Search" />
-              <button type="submit" placeholder className="form-control search">
+              <button type="submit" className="form-control search">
                 <span className="ion-ios-search" />
               </button>
             </div>
