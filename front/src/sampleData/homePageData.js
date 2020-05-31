@@ -8,6 +8,7 @@ export const headingImages = [
 ];
 
 export const whatWeOfferBackgroundImage = publicUrl + "/images/about.jpg";
+
 export const whatWeOfferSubject = [
   {
     icon: "flaticon-security",

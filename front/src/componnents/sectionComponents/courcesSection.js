@@ -22,7 +22,7 @@ const CourcesSection = (props) => {
             </h2>
             <p>
               Department of Computer Science and Engineering, JMIT provides an online plateform ELearning for learning various courses through video
-              tutorials, lecture notes delievered by our faculty.
+              tutorials, lecture notes delievered by our faculty.s
             </p>
           </div>
         </div>
@@ -36,9 +36,9 @@ const CourcesSection = (props) => {
                 </h3>
                 <p>{elem.description}</p>
                 <p>
-                  <Link to={elem.link} className="btn btn-primary">
+                  <a href={elem.link} className="btn btn-primary">
                     View More
-                  </Link>
+                  </a>
                 </p>
               </div>
             </div>

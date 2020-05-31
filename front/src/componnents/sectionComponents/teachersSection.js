@@ -2,6 +2,7 @@ import React from "react";
 import { TEACHERSDATA } from "../../sampleData/teachersDetail";
 
 const TeachersSection = (props) => {
+
   const DataToBeDisplayed = TEACHERSDATA.filter((_, index) => {
     if (props.limit) {
       if (props.limit > index) {
@@ -11,6 +12,7 @@ const TeachersSection = (props) => {
     }
     return true;
   });
+  
   return (
     <>
       <section className="ftco-section bg-light">

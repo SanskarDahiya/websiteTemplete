@@ -13,7 +13,7 @@ University, Kurukshetra.
 The college provides many UG &amp; PG Engineering Courses as B.Tech and M.Tech in several disciplines along with BBA, MBA, BCA, and MCA
 Course so far with a different number of the annual intake of students.`;
 
-export const COLLEGEVIDEOURL = "https://youtu.be/gDnH4acvmY8";
+export const COLLEGEVIDEOURL = "https://www.youtube.com/watch?v=Q18g6nL0WQE";
 export const COLLEGEVIDEOOVERLAYIMAGE = publicUrl + "/images/about-2.jpg";
 
 export const COLLEGEFIGURES = [
