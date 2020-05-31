@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Route, Link } from "react-router";
+import { Router, Route, Link } from "react-router-dom";
 import { headingImages } from "../../sampleData/homePageData";
 import { Fade } from "react-slideshow-image";
 const fadeProperties = {
@@ -30,9 +30,9 @@ const HeadingImageSection = (props) => {
                   <p>{item.desc}</p>
                   {item.button.map((button, id) => (
                     <p id={id}>
-                      <a href={button.link} className="btn btn-primary px-4 py-3 mt-3">
+                      <Link to={button.link} className="btn btn-primary px-4 py-3 mt-3">
                         {button.title}
-                      </a>
+                      </Link>
                     </p>
                   ))}
                 </div>

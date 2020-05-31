@@ -1,0 +1,58 @@
+const publicUrl = process.env.PUBLIC_URL;
+const initialLink = "singleBlog";
+export const BLOGS = [
+  {
+    image: publicUrl + "/images/image_1.jpg",
+    date: [26, "May", 2020],
+    link: initialLink + "1",
+    description: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    title: "Skills To Develop Your Child Memory",
+    comments: [],
+    author: "ADMIN",
+  },
+  {
+    image: publicUrl + "/images/image_1.jpg",
+    date: [26, "May", 2020],
+    link: initialLink + "1",
+    description: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    title: "Skills To Develop Your Child Memory",
+    comments: [],
+    author: "ADMIN",
+  },
+  {
+    image: publicUrl + "/images/image_1.jpg",
+    date: [26, "May", 2020],
+    link: initialLink + "1",
+    description: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    title: "Skills To Develop Your Child Memory",
+    comments: [],
+    author: "ADMIN",
+  },
+  {
+    image: publicUrl + "/images/image_1.jpg",
+    date: [26, "May", 2020],
+    link: initialLink + "1",
+    description: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    title: "Skills To Develop Your Child Memory",
+    comments: [],
+    author: "ADMIN",
+  },
+  {
+    image: publicUrl + "/images/image_1.jpg",
+    date: [26, "May", 2020],
+    link: initialLink + "1",
+    description: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    title: "Skills To Develop Your Child Memory",
+    comments: [],
+    author: "ADMIN",
+  },
+  {
+    image: publicUrl + "/images/image_1.jpg",
+    date: [26, "May", 2020],
+    link: initialLink + "1",
+    description: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    title: "Skills To Develop Your Child Memory",
+    comments: [],
+    author: "ADMIN",
+  },
+];

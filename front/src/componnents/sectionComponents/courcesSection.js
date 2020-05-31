@@ -3,7 +3,15 @@ import { COURCESDATA } from "../../sampleData/courcesDetails";
 import { Link } from "react-router-dom";
 
 const CourcesSection = (props) => {
-  const DataToBeDisplayed = props.limit ? COURCESDATA.splice(0, props.limit) : COURCESDATA;
+  const DataToBeDisplayed = COURCESDATA.filter((_, index) => {
+    if (props.limit) {
+      if (props.limit > index) {
+        return true;
+      }
+      return false;
+    }
+    return true;
+  });
   return (
     <section className="ftco-section">
       <div className="container-fluid px-4">
@@ -42,3 +50,26 @@ const CourcesSection = (props) => {
 };
 
 export default CourcesSection;
+
+// {COURCESDATA.map((elem, index) => {
+//   let limit = props.limit - 1 || COURCESDATA.length;
+//   if (limit < index) {
+//     return <></>;
+//   }
+//   return (
+//     <div key={index} className="col-md-3 course ">
+//       <div className="img" style={{ backgroundImage: `url(${elem.image})` }} />
+//       <div className="text pt-4">
+//         <h3>
+//           <Link to={elem.link}>{elem.name}</Link>
+//         </h3>
+//         <p>{elem.description}</p>
+//         <p>
+//           <Link to={elem.link} className="btn btn-primary">
+//             View More
+//           </Link>
+//         </p>
+//       </div>
+//     </div>
+//   );
+// })}

@@ -1,8 +1,9 @@
 const publicUrl = process.env.PUBLIC_URL;
 
-export const EMAIL = "director@jmit.ac.in";
-export const PHONENUMBER = "9999999999";
-export const ADDRESS = "ADDRESS";
+export const EMAIL = "gauravsharma@jmit.ac.in";
+export const PHONENUMBER = "+91 81680 27912";
+export const ADDRESS = "JMIT, Radaur, YamunaNagar 135133";
+export const WEBSITEURL = "https://jmit.ac.in/";
 
 export const COLLEGENAME = "Seth Jai Parkash Mukand Lal Institute of Engineering and Technology";
 export const COLLEGEDESCRIPTION = `  Seth Jai Parkash Mukand Lal Institute of Engineering and Technology is located in rural pollution-free and green habitat of Radaur at a
