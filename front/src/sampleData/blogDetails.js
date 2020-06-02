@@ -1,13 +1,13 @@
-import Axios from "axios";
+ import Axios from "axios";
 
 const publicUrl = process.env.PUBLIC_URL;
-Axios.post("http://127.0.0.1:5000/blog/")
-  .then(({ data: res }) => {
-    console.log("AXIOS POSR", res);
-  })
-  .catch((res) => {
-    console.log("AXIOS POSR", res);
-  });
+ Axios.post("http://127.0.0.1:5000/blog/")
+   .then(({ data: res }) => {
+     console.log("AXIOS POSR", res);
+   })
+   .catch((res) => {
+     console.log("AXIOS POSR", res);
+   });
 export const UpdateBlog = (updatedValue) => {
   alert(updatedValue);
 };
