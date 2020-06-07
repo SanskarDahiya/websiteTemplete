@@ -21,8 +21,7 @@ const BlogSections = (props) => {
                 <span>Recent</span> Blog
               </h2>
               <p>
-                Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a
-                paradisematic country
+                College is one of the most important stages in our life. We make friends for life, work towards our carrer, and learn life lessons.
               </p>
             </div>
           </div>

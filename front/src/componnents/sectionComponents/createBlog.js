@@ -76,7 +76,7 @@ const CreateBLog = (props) => {
             <div className="row justify-content-center mb-5 pb-2">
               <div className="col-md-8 text-center heading-section ">
                 <h2 className="mb-4">
-                  <span>white</span> Your Own Blog
+                  <span>Write</span> Your Own Blog
                 </h2>
                 <p>---WRITE HERE---</p>
               </div>

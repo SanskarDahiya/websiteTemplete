@@ -3,20 +3,20 @@ const publicUrl = process.env.PUBLIC_URL;
 export const COURCESDATA = [
   {
     name: "Data Structures",
-    link: "/",
+    link: "https://www.javatpoint.com/data-structure-tutorial",
     description:
       "Data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data.",
     image: publicUrl + "/images/course-1.jpg",
   },
   {
     name: "DBMS",
-    link: "/",
+    link: "https://www.tutorialspoint.com/dbms/index.htm",
     description: "Database Management System is a software for storing and retrieving users' data by considering appropriate security measures.",
     image: publicUrl + "/images/course-2.jpg",
   },
   {
     name: "Automata Theory",
-    link: "/",
+    link: "https://www.geeksforgeeks.org/theory-of-computation-automata-tutorials/",
     description:
       "Automata theory is the study of abstract machines and automata, as well as the computational problems that can be solved using them.",
     image: publicUrl + "/images/course-3.jpeg",

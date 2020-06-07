@@ -5,7 +5,7 @@ const SubPagesTopSection = (props) => {
 
   return (
     <>
-      <section className="hero-wrap hero-wrap-2" style={{ backgroundImage: 'url("/images/bg_1.jpg")' }}>
+      <section className="hero-wrap hero-wrap-2" style={{ backgroundImage: 'url("/images/sss.png")' }}>
         <div className="overlay" />
         <div className="container">
           <div className="row no-gutters slider-text align-items-center justify-content-center">

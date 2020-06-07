@@ -14,10 +14,11 @@ The college provides many UG &amp; PG Engineering Courses as B.Tech and M.Tech i
 Course so far with a different number of the annual intake of students.`;
 
 export const COLLEGEVIDEOURL = "https://www.youtube.com/watch?v=Q18g6nL0WQE";
-export const COLLEGEVIDEOOVERLAYIMAGE = publicUrl + "/images/about-2.jpg";
+export const COLLEGEVIDEOOVERLAYIMAGE = publicUrl + "/images/auditorium.jpg";
 
 export const COLLEGEFIGURES = [
   { name: "Placements", value: "287+" },
-  { name: "Studennts", value: "1857" },
+  { name: "Students", value: "1857" },
   { name: "Guest Lecture/Workshops", value: "375" },
+  { name: "Study Loan", value: "₹ 14675000" }
 ];

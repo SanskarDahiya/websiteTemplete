@@ -38,7 +38,7 @@ const CollegeBriefIntro = (props) => {
       <div className="container">
         <div className="row d-flex">
           <div className="col-md-5 order-md-last wrap-about wrap-about d-flex align-items-stretch">
-            <div className="img" style={{ backgroundImage: "url(images/about.jpg)" }} />
+            <div className="img" style={{ backgroundImage: "url(images/test.jpg)" }} />
           </div>
           <div className="col-md-7 wrap-about py-5 pr-md-4 ">
             <h2 className="mb-4">Computer Science Engineering</h2>

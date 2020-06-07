@@ -1,10 +1,10 @@
 import React from "react";
 
 const GALARYIMAGES = [
-  { url: "/images/image_1.jpg", image: "/images/image_1.jpg" },
-  { url: "/images/image_2.jpg", image: "/images/image_2.jpg" },
-  { url: "/images/image_3.jpg", image: "/images/image_3.jpg" },
-  { url: "/images/image_4.jpg", image: "/images/image_4.jpg" },
+  { url: "/images/gal4.jpg", image: "/images/gal4.jpg" },
+  { url: "/images/gal7.jpg", image: "/images/gal7.jpg" },
+  { url: "/images/gal3.jpg", image: "/images/gal3.jpg" },
+  { url: "/images/gal12.jpg", image: "/images/gal2.jpg" },
 ];
 
 const CampusGallery = (props) => {

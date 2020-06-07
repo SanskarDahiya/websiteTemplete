@@ -1,6 +1,6 @@
 import React from "react";
 import { COLLEGENAME, COLLEGEDESCRIPTION, COLLEGEVIDEOURL, COLLEGEVIDEOOVERLAYIMAGE, COLLEGEFIGURES } from "../../sampleData/collegeDetails";
-const BACKGROUNDIMAGE = process.env.PUBLIC_URL + "/images/bg_3.jpg";
+const BACKGROUNDIMAGE = process.env.PUBLIC_URL + "/images/gal9.jpg";
 
 const CollegeVideoAndFigures = () => {
   return (

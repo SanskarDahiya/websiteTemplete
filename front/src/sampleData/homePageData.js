@@ -1,13 +1,14 @@
 const publicUrl = process.env.PUBLIC_URL;
 
 export const headingImages = [
-  { imageUrl: publicUrl + "/images/bg_1.jpg", title: "ELearning", desc: "Computer Science And Engineering", button: [{ title: "2020", link: "/" }] },
-  { imageUrl: publicUrl + "/images/bg_2.jpg", title: "ELearning", desc: "Computer Science And Engineering", button: [{ title: "2020", link: "/" }] },
-  { imageUrl: publicUrl + "/images/bg_3.jpg", title: "ELearning", desc: "Computer Science And Engineering", button: [{ title: "2020", link: "/" }] },
-  { imageUrl: publicUrl + "/images/bg_3.jpg", title: "ELearning", desc: "Computer Science And Engineering", button: [{ title: "2020", link: "/" }] },
+  { imageUrl: publicUrl + "/images/gal5.jpg", title: "ELearning", desc: "Computer Science And Engineering", button: [{ title: "2020", link: "/" }] },
+  { imageUrl: publicUrl + "/images/gal16.jpg", title: "ELearning", desc: "Computer Science And Engineering", button: [{ title: "2020", link: "/" }] },
+  { imageUrl: publicUrl + "/images/test.jpg", title: "ELearning", desc: "Computer Science And Engineering", button: [{ title: "2020", link: "/" }] },
+  { imageUrl: publicUrl + "/images/gal9.jpg", title: "ELearning", desc: "Computer Science And Engineering", button: [{ title: "2020", link: "/" }] },
+  { imageUrl: publicUrl + "/images/testbg3.jpg", title: "ELearning", desc: "Computer Science And Engineering", button: [{ title: "2020", link: "/" }] },
 ];
 
-export const whatWeOfferBackgroundImage = publicUrl + "/images/about.jpg";
+export const whatWeOfferBackgroundImage = publicUrl + "/images/test.jpg";
 
 export const whatWeOfferSubject = [
   {
