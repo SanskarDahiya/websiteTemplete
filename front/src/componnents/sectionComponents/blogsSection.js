@@ -27,7 +27,7 @@ const BlogSections = (props) => {
           </div>
           <div className="row justify-content-center mb-5 pb-2">
             <h3 className="heading">
-              <Link to="/blog/addBlog">CLICK TO WRITE YOUR BLOG</Link>
+              {props && props.user ? <Link to="/blog/addBlog">CLICK TO WRITE YOUR BLOG</Link> : <Link to="/login"> LOGIN TO WRITE YOUR BLOG</Link>}
             </h3>
           </div>
           <div className="row">
