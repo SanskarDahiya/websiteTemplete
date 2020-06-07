@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Login from "./login";
 import { menuBar, logoUrl } from "../sampleData/forHeaderFooter";
 import { EMAIL, PHONENUMBER } from "../sampleData/collegeDetails";
 
@@ -39,7 +38,7 @@ const Header = (props) => {
                     <span>Call Us: {PHONENUMBER}</span>
                   </div>
                 </div>
-                <Login />
+                <LoginButton {...props} />
               </div>
             </div>
           </div>
@@ -79,6 +78,32 @@ const Header = (props) => {
           </div>
         </div>
       </nav>
+    </>
+  );
+};
+
+const LoginButton = (props) => {
+  const userUpdater = props.userUpdate;
+  return (
+    <>
+      <div className="col-md topper d-flex align-items-center justify-content-end">
+        <p>
+          {props && props.user ? (
+            <div
+              onClick={() => {
+                userUpdater(false);
+              }}
+              className="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center"
+            >
+              <span id="username1">Signout ({JSON.stringify((props.user && props.user.username) || {})})</span>
+            </div>
+          ) : (
+            <Link to="/login" className="btn py-2 px-3 btn-primary d-flex align-items-center justify-content-center">
+              <span id="username">Login</span>
+            </Link>
+          )}
+        </p>
+      </div>
     </>
   );
 };

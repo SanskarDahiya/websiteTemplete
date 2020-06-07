@@ -8,6 +8,7 @@ import TeachersSection from "./sectionComponents/teachersSection";
 import CampusGallery from "./sectionComponents/campusGallery";
 import StudentTestimonials from "./sectionComponents/studentTestimonialsSection";
 import BlogSections from "./sectionComponents/blogsSection";
+
 const Index = (props) => {
   return (
     <>

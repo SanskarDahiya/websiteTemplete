@@ -18,8 +18,8 @@ const Course = (props) => {
   return (
     <>
       <div>
-        <SubPagesTopSection {...values} />
-        <CourcesSection />
+        <SubPagesTopSection {...values} {...props} />
+        <CourcesSection {...props} />
       </div>
     </>
   );

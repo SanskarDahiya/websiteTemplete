@@ -3,6 +3,8 @@ import { COURCESDATA } from "../../sampleData/courcesDetails";
 import { Link } from "react-router-dom";
 
 const CourcesSection = (props) => {
+  console.warn(props);
+
   const DataToBeDisplayed = COURCESDATA.filter((_, index) => {
     if (props.limit) {
       if (props.limit > index) {
@@ -31,14 +33,18 @@ const CourcesSection = (props) => {
             <div key={index} className="col-md-3 course ">
               <div className="img" style={{ backgroundImage: `url(${elem.image})` }} />
               <div className="text pt-4">
-                <h3>
-                  <a href={elem.link}>{elem.name}</a>
-                </h3>
+                <h3>{props && props.user ? <a href={elem.link}>{elem.name}</a> : <>{elem.name}</>}</h3>
                 <p>{elem.description}</p>
                 <p>
-                  <a href={elem.link} className="btn btn-primary">
-                    View More
-                  </a>
+                  {props && props.user ? (
+                    <a href={elem.link} className="btn btn-primary">
+                      View More
+                    </a>
+                  ) : (
+                    <Link to="/login" className="btn btn-primary">
+                      Login to View
+                    </Link>
+                  )}
                 </p>
               </div>
             </div>
