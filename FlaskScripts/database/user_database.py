@@ -13,7 +13,7 @@ class user:
             output = self.db.find({name:data} if name else {})
             list = [x for x in output]
             # print(list)
-            return list or False
+            return list 
         except Exception as e:
             # print('err',e)
             return False
