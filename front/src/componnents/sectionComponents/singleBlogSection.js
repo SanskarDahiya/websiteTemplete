@@ -62,7 +62,14 @@ const SingleBlogSection = (props) => {
 
               {!notFound && (
                 <>
-                  <p>{(singleBlog && singleBlog.description) || "BLOD DETAILS"}</p>
+                  <p
+                    style={{
+                      width: "75%",
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    {(singleBlog && singleBlog.description) || "BLOD DETAILS"}
+                  </p>
                   <div className="tag-widget post-tag-container mb-5 mt-5">
                     <div className="tagcloud">{singleBlog && (singleBlog.tags ? "TAGS: " + singleBlog.tags : "")}</div>
                   </div>

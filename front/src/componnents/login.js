@@ -1,13 +1,9 @@
 import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
+import { validateLogin } from "../sampleData/loginSetup";
 
 const Login = (props) => {
-  console.warn(props);
-
-  console.log("PUSHED TO", props.user);
   if (props && props.user) {
-    console.log("PUSHED TO", props.history.push);
-
     props.history.push("/");
   }
   const userUpdater = props.userUpdate;
@@ -27,7 +23,7 @@ const Login = (props) => {
     messageUpdater(e.target.value);
   };
 
-  const handelSubmit = (e) => {
+  const handelSubmit = async (e) => {
     e.preventDefault();
     alertUpdater(false);
     if (!author || author.trim().length <= 0 || !message || message.trim().length <= 0) {
@@ -38,7 +34,14 @@ const Login = (props) => {
       password: message,
       username: author,
     };
-    userUpdater(newLogin);
+    const resp = await validateLogin(newLogin);
+    if (resp && resp.result) {
+      alert(resp.result);
+    }
+    if (resp && resp._id) {
+      alert(JSON.stringify(resp));
+      userUpdater(resp);
+    }
     return;
   };
 
@@ -50,7 +53,7 @@ const Login = (props) => {
 
           <div className="form-group">
             <label>Email address</label>
-            <input type="email" className="form-control" placeholder="Enter email" onChange={setAuthor} />
+            <input type="email" className="form-control" placeholder="Enter email" autoFocus={true} onChange={setAuthor} />
           </div>
 
           <div className="form-group">

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SubPagesTopSection from "./subPagesTopSection";
 import { Link } from "react-router-dom";
+import { insertBlog } from "../../sampleData/blogDetails";
 const values1 = {
   headingName: "CREATE BLOGS",
   subPageLink: [
@@ -20,6 +21,9 @@ const values1 = {
 };
 
 const CreateBLog = (props) => {
+  if (props && !props.user) {
+    props.history.push("/blog");
+  }
   const [title, titleUpdater] = useState("");
   const [message, messageUpdater] = useState("");
   const [tags, tagsUpdater] = useState("");
@@ -46,26 +50,33 @@ const CreateBLog = (props) => {
     messageUpdater(e.target.value);
   };
   const formHandle = async (e) => {
-    e.preventDefault();
-    alertUpdater(false);
+    try {
+      e.preventDefault();
+      alertUpdater(false);
 
-    if (!title || title.trim().length <= 0 || !author || author.trim().length <= 0 || !message || message.trim().length <= 0) {
-      alertUpdater(true);
-      return;
+      if (!title || title.trim().length <= 0 || !message || message.trim().length <= 0) {
+        alertUpdater(true);
+        return;
+      }
+      const date = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      let d = new Date();
+
+      let _id = await insertBlog({
+        user: props.user,
+        blog: {
+          title,
+          description: message,
+          comments: [],
+          date: [d.getDate(), date[d.getMonth()], d.getFullYear()],
+          image: "/images/image_1.jpg",
+        },
+      });
+      props.history.push("/blog/single/" + _id);
+    } catch (err) {
+      console.error(err, "At createBLog level");
+
+      alert("Unknown Error");
     }
-    const date = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    let d = new Date();
-    const newBlog = {
-      title,
-      description: message,
-      comment: [],
-      date: [d.getDate(), date[d.getMonth()], d.getFullYear()],
-      author,
-      image: "/images/image_1.jpg",
-    };
-    alert(JSON.stringify(newBlog));
-    var z = { title: "mkgl", description: ",m,,n", comment: [], date: [31, "May", 2020], author: "n,mn,mn,m", image: "/images/image_1.jpg" };
-    return;
   };
   return (
     <>
@@ -98,12 +109,12 @@ const CreateBLog = (props) => {
                 <div className="tag-widget post-tag-container mb-5 mt-5">
                   <div className="tagcloud">
                     <div className="form-group">
-                      <label htmlFor="name">TAGS (if any)</label>
+                      <label htmlFor="name">TAGS (if any, comma saperated)</label>
                       <input type="text" className="form-control" id="tags" onChange={setTags} value={tags} />
                     </div>
                   </div>
                 </div>
-                <div className="about-author d-flex p-4 bg-light">
+                {/* <div className="about-author d-flex p-4 bg-light">
                   <div className="desc">
                     <h3>
                       <div className="form-group">
@@ -112,7 +123,7 @@ const CreateBLog = (props) => {
                       </div>
                     </h3>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="form-group">

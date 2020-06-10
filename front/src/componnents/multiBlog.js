@@ -26,7 +26,7 @@ const MultiBlogs = (props) => {
           <BlogSections {...props} />
         </Route>
         <Route path="/blog/single/:id" exact render={(zz) => <SingleBlogSection {...props} {...zz} />} />
-        <Route path="/blog/addBlog" exact component={CreateBLog} />
+        <Route path="/blog/addBlog" exact render={(zz) => <CreateBLog {...props} {...zz} />} />
         <Redirect from="*" to="/blog" />
       </Switch>
     </>
