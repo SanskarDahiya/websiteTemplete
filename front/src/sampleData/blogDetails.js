@@ -8,6 +8,7 @@ const updateBLogs = async () => {
   if (data && data.result) {
     BLOGS = data.result;
   }
+  return data.result;
 };
 
 export const insertBlog = async (blog) => {
@@ -21,14 +22,15 @@ export const insertBlog = async (blog) => {
 };
 
 export const UpdateBlog = async (updatedValue) => {
-  alert(updatedValue);
-  await updateBLogs();
+  Axios.post(ServerUrl + "updateBlog", updatedValue);
+  alert(JSON.stringify(updatedValue));
+  updateBLogs();
 };
 
 export const GETBLOGS = (limit = false) =>
   new Promise((res) => {
     try {
-      updateBLogs().then(() => {
+      updateBLogs().then((data) => {
         let blogs = BLOGS.filter((_, index) => {
           if (limit) {
             if (limit > index) {

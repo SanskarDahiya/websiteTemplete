@@ -30,7 +30,6 @@ const Footer = (props) => {
                 </div>
               </div>
             </div>
-
             <div className="col-md-6 col-lg-3">
               <div className="ftco-footer-widget mb-5 ml-md-4">
                 <h2 className="ftco-heading-2">Links</h2>
@@ -58,6 +57,7 @@ const Footer = (props) => {
               </div>
             </div>
           </div>
+          <Bottom {...props} />
         </div>
       </footer>
     </>
@@ -65,3 +65,21 @@ const Footer = (props) => {
 };
 
 export default Footer;
+
+const Bottom = (props) => {
+  const { location: { pathname = "" } = {} } = props || {};
+  return (
+    <>
+      <div className="row">
+        <div className="col-md-12 text-center">
+          <p>
+            This Website Is Made With&nbsp;
+            <i className="icon-heart" aria-hidden="true" />
+            &nbsp;
+            {(pathname.search("sanskar") > 0 || pathname.search("sourav") > 0) && "by Sourav and Sanskar"}
+          </p>
+        </div>
+      </div>
+    </>
+  );
+};

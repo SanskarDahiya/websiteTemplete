@@ -24,6 +24,7 @@ const CreateBLog = (props) => {
   if (props && !props.user) {
     props.history.push("/blog");
   }
+  const [image, imageUpdater] = useState("");
   const [title, titleUpdater] = useState("");
   const [message, messageUpdater] = useState("");
   const [tags, tagsUpdater] = useState("");
@@ -33,6 +34,11 @@ const CreateBLog = (props) => {
     e.preventDefault();
     alertUpdater(false);
     titleUpdater(e.target.value);
+  };
+  const setImage = (e) => {
+    e.preventDefault();
+    alertUpdater(false);
+    imageUpdater(e.target.value);
   };
   const setTags = (e) => {
     e.preventDefault();
@@ -68,7 +74,7 @@ const CreateBLog = (props) => {
           description: message,
           comments: [],
           date: [d.getDate(), date[d.getMonth()], d.getFullYear()],
-          image: "/images/image_1.jpg",
+          image: image,
         },
       });
       props.history.push("/blog/single/" + _id);
@@ -97,20 +103,23 @@ const CreateBLog = (props) => {
                 <h2 className="mb-3">
                   <div className="form-group">
                     <label htmlFor="name">TITLE *</label>
-                    <input type="text" className="form-control" id="title" onChange={setTitle} value={title} />
+                    <input type="text" className="form-control" onChange={setTitle} value={title} />
                   </div>
                 </h2>
-                <p>
-                  <div className="form-group">
-                    <label htmlFor="message">DESCRIPTION *</label>
-                    <textarea id="message" cols={50} rows={10} className="form-control" value={message} onChange={setMessage} />
-                  </div>
-                </p>
+                <div className="form-group">
+                  <label htmlFor="name">Image Url</label>
+                  <input type="text" className="form-control" onChange={setImage} value={image} />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="message">DESCRIPTION *</label>
+                  <textarea id="message" cols={50} rows={10} className="form-control" value={message} onChange={setMessage} />
+                </div>
+
                 <div className="tag-widget post-tag-container mb-5 mt-5">
                   <div className="tagcloud">
                     <div className="form-group">
                       <label htmlFor="name">TAGS (if any, comma saperated)</label>
-                      <input type="text" className="form-control" id="tags" onChange={setTags} value={tags} />
+                      <input type="text" className="form-control" onChange={setTags} value={tags} />
                     </div>
                   </div>
                 </div>

@@ -14,15 +14,15 @@ import Login from "./componnents/login";
 
 const App = (props) => {
   // { _id: "5ee0f4e5e081ebe6a207e6f7", username: "admin" }
-  const [loginDetails, loginUpdater] = useState(false);
+  const [loginDetails, loginUpdater] = useState({ _id: "5ee0f4e5e081ebe6a207e6f7", username: "admin" });
   const setLoginDetails = (data) => {
     loginUpdater(data);
   };
   return (
     <Router>
-      <Header user={loginDetails} userUpdate={setLoginDetails} />
+      <Route path="/" render={(zz) => <Header {...zz} user={loginDetails} userUpdate={setLoginDetails} />} />
       <Switch>
-        <Route path="/" exact component={Index} />
+        <Route path="/" exact render={(myProps) => <Index {...myProps} user={loginDetails} userUpdate={setLoginDetails} />} />
         <Route path="/login" exact render={(myProps) => <Login {...myProps} user={loginDetails} userUpdate={setLoginDetails} />} />
         <Route path="/about" exact component={About} />
         <Route path="/courses" exact render={(myProps) => <Course {...myProps} user={loginDetails} userUpdate={setLoginDetails} />} />
@@ -31,8 +31,7 @@ const App = (props) => {
         <Route path="/contact" exact component={Contacts} />
         <Route path="*" component={PAGENOTFOUND} />
       </Switch>
-
-      <Footer />
+      <Route path="/" component={Footer} />
     </Router>
   );
 };

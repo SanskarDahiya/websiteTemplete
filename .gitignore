@@ -21,3 +21,5 @@ front/.env.production.local
 npm-debug.log*
 front/yarn-debug.log*
 front/yarn-error.log*
+backend/FlaskScripts/__pycache__/
+backend/FlaskScripts/database/__pycache__/

@@ -36,7 +36,7 @@ const Login = (props) => {
     };
     const resp = await validateLogin(newLogin);
     if (resp && resp.result) {
-      alert(resp.result);
+      // alert(resp.result);
     }
     if (resp && resp._id) {
       alert(JSON.stringify(resp));
@@ -52,8 +52,8 @@ const Login = (props) => {
           <h3>Sign In</h3>
 
           <div className="form-group">
-            <label>Email address</label>
-            <input type="email" className="form-control" placeholder="Enter email" autoFocus={true} onChange={setAuthor} />
+            <label>Username / Email address</label>
+            <input type="text" className="form-control" placeholder="Enter email" autoFocus={true} onChange={setAuthor} />
           </div>
 
           <div className="form-group">

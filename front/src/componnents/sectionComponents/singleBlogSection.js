@@ -58,6 +58,20 @@ const SingleBlogSection = (props) => {
         <div className="container">
           <div className="row">
             <div className="col-lg-8 ">
+              <img
+                style={{
+                  position: "absolute",
+                  right: 0,
+                  top: "-10%",
+                  border: "1px solid red",
+                  width: 200,
+                  height: 200,
+                }}
+                src={singleBlog && singleBlog.image}
+                alt="BLOG IMAGE"
+                className="block-20 d-flex align-items-end"
+              />
+
               <h2 className="mb-3">{(singleBlog && singleBlog.title) || "TITLE"}</h2>
 
               {!notFound && (
