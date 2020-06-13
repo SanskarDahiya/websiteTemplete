@@ -62,7 +62,7 @@ const SingleBlogSection = (props) => {
                 style={{
                   position: "absolute",
                   right: 0,
-                  top: "-10%",
+                  top: 0,
                   border: "1px solid red",
                   width: 200,
                   height: 200,
@@ -82,7 +82,7 @@ const SingleBlogSection = (props) => {
                       lineHeight: 1.5,
                     }}
                   >
-                    {(singleBlog && singleBlog.description) || "BLOD DETAILS"}
+                    {(singleBlog && singleBlog.description) || "BLOG DETAILS"}
                   </p>
                   <div className="tag-widget post-tag-container mb-5 mt-5">
                     <div className="tagcloud">{singleBlog && (singleBlog.tags ? "TAGS: " + singleBlog.tags : "")}</div>

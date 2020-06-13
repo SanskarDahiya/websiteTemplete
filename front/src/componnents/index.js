@@ -17,7 +17,7 @@ const Index = (props) => {
         <BriefIntroOfCollege />
         <WhatWeOfferSection />
         <CollegeVideoAndFigures />
-        <CourcesSection limit={4} />
+        <CourcesSection limit={4} {...props}/>
         <TeachersSection limit={4} />
         <BlogSections limit={3} {...props} />
         <StudentTestimonials />

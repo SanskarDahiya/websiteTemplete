@@ -36,10 +36,10 @@ const Login = (props) => {
     };
     const resp = await validateLogin(newLogin);
     if (resp && resp.result) {
-      // alert(resp.result);
+      alert(resp.result);
     }
     if (resp && resp._id) {
-      alert(JSON.stringify(resp));
+      // alert(JSON.stringify(resp));
       userUpdater(resp);
     }
     return;

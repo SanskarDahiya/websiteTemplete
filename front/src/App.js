@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./App.css";
 import Header from "./componnents/header";
 import Footer from "./componnents/footer";
@@ -11,13 +11,42 @@ import MultiBlogs from "./componnents/multiBlog";
 import Contacts from "./componnents/contacts";
 import PAGENOTFOUND from "./componnents/pageNotFound";
 import Login from "./componnents/login";
+const localStoragename = 'loginCredentials'
+// // setter
+// localStorage.setItem('myData', data);
+ 
+// // getter
+// localStorage.getItem('myData');
+ 
+// // remove
+// localStorage.removeItem('myData');
+ 
+// // remove all
+// localStorage.clear();
 
 const App = (props) => {
   // { _id: "5ee0f4e5e081ebe6a207e6f7", username: "admin" }
-  const [loginDetails, loginUpdater] = useState({ _id: "5ee0f4e5e081ebe6a207e6f7", username: "admin" });
+  const [loginDetails, loginUpdater] = useState(false);
+
+
   const setLoginDetails = (data) => {
+    // used for login as well as logout
     loginUpdater(data);
+    if(data){
+    localStorage.setItem(localStoragename, JSON.stringify(data));
+  } else {
+    localStorage.removeItem(localStoragename);
+  }
   };
+
+
+  useEffect(()=>{
+    let data = localStorage.getItem(localStoragename);
+    if(data){
+      data = JSON.parse(""+data)
+      loginUpdater(data)
+    }
+  },[])
   return (
     <Router>
       <Route path="/" render={(zz) => <Header {...zz} user={loginDetails} userUpdate={setLoginDetails} />} />

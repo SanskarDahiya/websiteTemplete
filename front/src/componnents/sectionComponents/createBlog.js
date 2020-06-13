@@ -118,7 +118,7 @@ const CreateBLog = (props) => {
                 <div className="tag-widget post-tag-container mb-5 mt-5">
                   <div className="tagcloud">
                     <div className="form-group">
-                      <label htmlFor="name">TAGS (if any, comma saperated)</label>
+                      <label htmlFor="name">TAGS (if any, comma separated)</label>
                       <input type="text" className="form-control" onChange={setTags} value={tags} />
                     </div>
                   </div>

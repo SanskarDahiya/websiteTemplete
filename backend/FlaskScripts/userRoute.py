@@ -22,7 +22,7 @@ users = Blueprint('userRoute', __name__, url_prefix='/user')
 
 #
 # sample call
-#   http://localhost:5000/user/insertUser?username=admin&password=123456789
+#   http://localhost:5000/user/insertUser?username=sourav&password=123456789
 #
 @users.route("/insertUser", methods=['GET', 'POST'])
 def insertUser():
@@ -90,6 +90,7 @@ def validateUser():
             "result": "Wrong Password"
         })
     except Exception as e:
+        print(e)
         return {
-            "status": "Have Error at server"
+            "result": "Have Error at server"
         }
