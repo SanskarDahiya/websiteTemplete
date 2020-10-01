@@ -1,3 +1,10 @@
+# ANY TYPE OF UPDATE ON OUR PROJECT WILL BE ACCEPTED, IF REQUIRED
+## We have different branches for project
+
+## master: only backend code
+## dev: Complete code for backend as well as frontend
+## rest are for testing & delivery purpose
+
 # An Awesome Project1
 
 
