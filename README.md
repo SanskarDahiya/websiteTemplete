@@ -1,7 +1,7 @@
 # Project1\
 
 
-This project use mogodb server
+This project use mongodb server
 
 add your server address in here[FlaskScripts/database/database.py]
  
@@ -17,7 +17,7 @@ date:'Kal ki',
 desc:'Details 2'
 },
 {name:'Name3',
-date:'Pasor ki',
+date:'Parso ki',
 desc:'Details 3'
 },
 ]
