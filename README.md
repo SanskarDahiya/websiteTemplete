@@ -1,4 +1,4 @@
-# Project1\
+# A great project
 
 
 This project use mogodb server
