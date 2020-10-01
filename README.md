@@ -1,9 +1,9 @@
 # Project1\
 
 
-This project use mogodb server
+This project uses mongodb server
 
-add your server address in here[FlaskScripts/database/database.py]
+Add your server address here[FlaskScripts/database/database.py]
  
 
 
